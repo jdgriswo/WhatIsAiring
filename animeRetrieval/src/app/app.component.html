@@ -1,0 +1,15 @@
+<h1>What's Airing?</h1>
+<h3>Searches the top 50, currently-airing anime from MyAnimeList, and displays them for your consumption. Hit the button below, then type in the search bar to filter the results by name.</h3>
+
+<button (click)='getAnime()'>Retrieve Anime</button>
+<input *ngIf='animeList' #filter (input)='filterAnime(filter.value);' placeholder='Search Anime'/>
+
+<table *ngIf='filteredList'>
+    <tr *ngFor='let anime of filteredList; index as i'>
+        <td [ngClass]="{'table-header' : i===0}">{{ anime.title }}</td>
+        <td [ngClass]="{'table-header' : i===0}">{{ anime.type }}</td>
+        <td [ngClass]="{'table-header' : i===0}">{{ anime.episodes || 'N/A' }}</td>
+        <td [ngClass]="{'table-header' : i===0}">{{ anime.score }}</td>
+        <td [ngClass]="{'table-header' : i===0}">{{ anime.rank }}</td>
+    </tr>
+</table>

@@ -1,0 +1,21 @@
+button {
+    margin: 5px;
+}
+
+table, tr, td {
+    margin: 5px;
+    padding: 3px;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #f2f2f2;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+td.table-header {
+    background-color: #b3b3b3;
+}
+
+h1, h3 {
+    margin: 15px;
+}
