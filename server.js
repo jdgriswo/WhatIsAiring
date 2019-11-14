@@ -16,6 +16,7 @@ app.use(cors(corsOptions));
 
 app.listen(8000, () => { console.log('server running'); });
 
+// Retrieve top 50 currently-airing anime from Jikan
 app.route('/api/anime').get((req, res) => {
     /* const response = [{ name: 'Ghost in the Shell' }, { name: 'Spirited Away' }];
     console.log(response);
