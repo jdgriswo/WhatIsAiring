@@ -10,6 +10,7 @@ export class AnimeService {
 
   constructor( private http: HttpClient ) {  }
 
+  // Call server-side API
   getAnime(): Observable<Object[]> {
     return this.http.get<Object[]>('http://localhost:8000/api/anime');
   }
